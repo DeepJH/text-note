@@ -30,22 +30,104 @@
 
 * **第一步：简单设计（确定需求 Proposal）** [[03:11](https://www.youtube.com/watch?v=ytT4-lGEf6A&t=191)]
     * **技巧：** 让 AI 主动提问。提示词中加入 **“我不了解相关知识，请用提问的方式帮助我确定需求，不要猜测我的意图”** [[04:03](https://www.youtube.com/watch?v=ytT4-lGEf6A&t=243)]。
-    * **产物：** 生成 `proposal.md` 需求文档 [[04:42](https://www.youtube.com/watch?v=ytT4-lGEf6A&t=282)]。
+    * **产物：** 生成 `proposal.md` 需求文档 [[04:42](https://www.youtube.com/watch?v=ytT4-lGEf6A&t=282)]。  
+    
+    [stage-1.png](images/stage-1.png)
+    ```
+    # 角色与任务
+    你是一个经验丰富的软件架构师与AI开发助手。当前的任务是协助我完成一个用 Python 开发的 FC（NES）模拟器的需求文档。该模拟器的最终目标是能够成功运行《超级玛丽》（Super Mario Bros.）。
 
+    # 已知输入
+    1. 当前项目目录是一个使用 `uv` 管理的 Python 工程。
+    2. 在 `rom` 目录下已经准备好了《超级玛丽》的 ROM 镜像。
+
+    # 输出要求
+    请在 `doc` 目录下生成需求文档，文件名为 `proposal.md`。
+
+    # 执行步骤与严苛限制
+    1. 我目前不了解任何关于 FC 模拟器开发的底层知识。
+    2. 你必须使用【提问】的方式来逐步引导我，帮助我确认和梳理具体的需求。
+    3. 【绝对禁止】猜测我的意图。任何不明确、不确定、或者有多种实现方案的地方，你必须向我提问，直到我们达成共识。
+    4. 在开始生成 `doc/proposal.md` 之前，请先列出第一批你需要向我确认的核心问题。
+    ```
 
 * **第二步：简单设计（详细设计 Design）** [[04:55](https://www.youtube.com/watch?v=ytT4-lGEf6A&t=295)]
     * **技巧：** 基于上一步的文档，让 AI 将系统划分为独立的模块（如 CPU、PPU、ROM 加载等）。
     * **新建对话：** 此时应**新开一个 AI 会话**，只把核心的 `proposal.md` 喂给 AI，保持上下文简短，防止 token 消耗过大和 AI 产生幻觉 [[06:17](https://www.youtube.com/watch?v=ytT4-lGEf6A&t=377)]。
     * **产物：** 生成详细的设计文档 [[06:55](https://www.youtube.com/watch?v=ytT4-lGEf6A&t=415)]。
+    
+    [stage-2.png](images/stage-2.png)
+    ```
+    # 角色与任务
+    你是一个顶级的系统架构师。请根据已有的需求文档，为这个 Python 开发的 FC 模拟器生成概要设计（High-Level Design）文档。
+
+    # 输入
+    - 需求文档：`doc/proposal.md`（请阅读此文件内容）
+
+    # 输出要求
+    - 概要设计文档：`doc/high-level-design.md`
+
+    # 执行步骤与严苛限制
+    1. 深入阅读并根据需求文档的内容，合理划分出模拟器的核心模块（例如：CPU、PPU、APU、Bus、Controller 等）。
+    2. 清晰识别并定义各个模块之间的调用关系与数据流向。
+    3. 最终生成完整的 `doc/high-level-design.md`。
+    4. 【绝对禁止】猜测我的意图。在模块划分、架构选择或任何不明确的地方，你必须立刻向我提问，确认后再继续。
+    ```
 
 
 * **第三步：任务拆解（Tasks）** [[07:44](https://www.youtube.com/watch?v=ytT4-lGEf6A&t=464)]
     * **技巧：** 命令 AI 为每个模块生成单边缘任务清单（Checklist），并生成一个 `progress.md` 记录整体进度 [[07:52](https://www.youtube.com/watch?v=ytT4-lGEf6A&t=472)]。
 
+    [stage-3](images/stage-3.png)
+    ```
+    # 角色与任务
+    你是一个敏捷开发专家与项目经理。我们需要将设计转化为可落地执行的开发任务。
+
+    # 输入
+    - 需求文档：`doc/proposal.md`
+    - 详细设计文档：`doc/detailed-design.md`（注：通常在概要设计后生成，请结合现有设计文档进行）
+
+    # 输出要求
+    - 任务列表文件：
+    1. `doc/tasks/<module-name>.md`（每个独立模块对应一个任务文件）
+    2. `doc/tasks/progress.md`（整体进度跟踪文件）
+
+    # 执行步骤
+    1. 根据需求文档和详细设计文档，将每个模块拆解为适合 AI 进行 Vibe Coding（氛围感编码/全自动编码）的【最小可执行任务】。
+    2. 为每一个模块生成对应的 `doc/tasks/<module-name>.md`，并在其中使用 Markdown 的 Check list（`- [ ]`）来表示子任务的完成状态。
+    3. 生成全局的 `doc/tasks/progress.md`，并在其中使用 Check list 来表示各个大模块的整体完成进度。
+    ```
+
 
 * **第四步：代码实现（Coding - 主/子 Agent 架构）** [[08:38](https://www.youtube.com/watch?v=ytT4-lGEf6A&t=518)]
     * **架构：** 为了避免单会话因上下文过长而导致 AI 自动压缩总结、遗漏代码细节，博主命令编程工具（如 Claude Code）采用 **“1 个主监督 Agent + N 个子编程 Agent”** 的架构 [[09:17](https://www.youtube.com/watch?v=ytT4-lGEf6A&t=557)]。
     * **约束：** 要求子 Agent 编写的每行代码都必须有对应的单元测试，且必须通过 `mypy` 和 `ruff` 检查 [[10:13](https://www.youtube.com/watch?v=ytT4-lGEf6A&t=613)]。
+
+    [stage-4.png](images/stage-4.png)
+    ```
+    # 角色与任务
+    你是一个精通 AI Agent 架构的提示词工程师。我们需要为全自动的 Vibe Coding 阶段生成一份核心启动提示词（System Prompt / Master Prompt）。
+
+    # 输入
+    - 需求文档：`doc/proposal.md`
+    - 详细设计文档：`doc/detailed-design.md`
+    - 任务划分文件：`doc/tasks/` 目录下的所有任务列表
+
+    # 输出要求
+    - 启动提示词文件：`doc/prompt.md`
+
+    # 执行步骤与技术约束
+    1. 阅读所有输入信息，深度理解当前要实现的项目工程（Python FC模拟器跑超级玛丽）。
+    2. 生成 `doc/prompt.md`，该文件将作为后续 Vibe Coding 自动化执行的起始 Prompt。
+    3. 提示词中必须包含并设计好以下 Agent 架构：
+    - **主 Agent（Main Agent）**：负责全局统筹，跟踪并更新 `doc/tasks/progress.md` 中的整体进度。
+    - **子 Agent（Sub Agent）**：由主 Agent 动态生成，专门用来实现某一个具体的模块代码，并负责运行和完成测试。
+    - **自动化要求**：明确整个代码编写、测试、修复的过程将【完全没有人工参与】，要求 Agent 具备自主闭环能力。
+    4. **代码质量硬性约束**：
+    - 所有生成的 Python 代码必须附带完整的 `pytest` 单元测试。
+    - 所有代码和测试必须无警告、无错误地通过 `mypy`（类型检查）和 `ruff`（代码风格与 Linter）的检测。
+    5. 【严苛限制】：在生成此 prompt 的过程中，若有任何不明确或需要取舍的地方，必须向我提问，严禁自行猜测。
+    ```
 
 
 
