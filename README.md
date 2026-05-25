@@ -1,5 +1,5 @@
 # text-note
-> Any content is an echo of the mind, imagine it, rather than record it.
+> Any content is an echo of the mind. Imagine it, rather than record it.
 
 ## Discription
 textbook & notebook.
