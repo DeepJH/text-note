@@ -1,8 +1,9 @@
-# Learning Resource
+# text-note
+> Any content is an echo of the mind, imagine it, rather than record it.
 
-## 说明
-都是笔记，自己看吧。懒得写`README`了。点个`star`吧
+## Discription
+textbook & notebook.
+Star me!:D
 
-## 许可证
+## LICENSE
 [MIT](LICENSE)
-本仓库资源仅供学习参考使用。
