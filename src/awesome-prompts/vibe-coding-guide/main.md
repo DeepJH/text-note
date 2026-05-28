@@ -6,6 +6,9 @@
 > Gemini 总结原文：[https://gemini.google.com/app/8818ce31cf14fd6f?hl=zh-cn](https://gemini.google.com/app/8818ce31cf14fd6f?hl=zh-cn)  
 > 后期经过`DeepJH`大量手动编辑
 
+## DeepJH 实践特调 vibe coding 提示词
+[vibe-coding-prompt-deepjh](../../../src/awesome-prompts/vibe-coding-prompt-deepjh/)
+
 ## 核心内容和步骤总结如下：
 
 ### 1. 语言与工具的选择 [[01:04](https://www.youtube.com/watch?v=ytT4-lGEf6A&t=64)]
