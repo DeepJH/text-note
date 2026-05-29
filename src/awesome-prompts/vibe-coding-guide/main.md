@@ -7,7 +7,8 @@
 > 后期经过`DeepJH`大量手动编辑
 
 ## DeepJH 实践特调 vibe coding 提示词
-[vibe-coding-prompt-deepjh](../../../src/awesome-prompts/vibe-coding-prompt-deepjh/)
+[vibe-coding-prompt-deepjh](../../../src/awesome-prompts/vibe-coding-prompt-deepjh/)  
+[[vibe-coding-guide/main]]
 
 ## 核心内容和步骤总结如下：
 
