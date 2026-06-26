@@ -51,6 +51,7 @@
 - use:
     
     ```bash
+    codegraph install
     codegraph init
     
     ```
