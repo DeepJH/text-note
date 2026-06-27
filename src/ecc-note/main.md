@@ -21,23 +21,23 @@ The agent harness performance optimization system. Skills, instincts, memory, se
 
 ## Quick Start
 
-[src/vibe-coding/ecc-note/quick-start.md](src/vibe-coding/ecc-note/quick-start.md)
+[/src/ecc-note/part/quick-start.md](/src/ecc-note/part/quick-start.md)
 
-## Cheat Sheet(Which Agent Should I Use?)
+## Which Agent Should I Use
 
-[src/vibe-coding/ecc-note/cheat-sheet.md](src/vibe-coding/ecc-note/cheat-sheet.md)
+[/src/ecc-note/part/which-agent-should-i-uses.md](/src/ecc-note/part/which-agent-should-i-uses.md)
 
 ## Key Consepts
 
-[src/vibe-coding/ecc-note/key-consept.md](src/vibe-coding/ecc-note/key-consept.md)
+[/src/ecc-note/part/key-consept.md](/src/ecc-note/part/key-consept.md)
 
 ## Ecosystem Tools
 
-[src/vibe-coding/ecc-note/ecosystem-tools.md](src/vibe-coding/ecc-note/ecosystem-tools.md)
+[/src/ecc-note/part/ecosystem-tools.md](/src/ecc-note/part/ecosystem-tools.md)
 
 ## X Support
 
-[src/vibe-coding/ecc-note/x-support.md](src/vibe-coding/ecc-note/x-support.md)
+[/src/ecc-note/part/x-support.md](/src/ecc-note/part/x-support.md)
 
 ## Token Optimization
 
