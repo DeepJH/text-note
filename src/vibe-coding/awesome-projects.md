@@ -13,6 +13,12 @@
     
     - [https://github.com/obra/superpowers](https://github.com/obra/superpowers)
 
+- note
+    
+    - 这是一个agent harness performance optimization system。
+    
+    - 通过此项目，你可以快速安装大量插件和规则，并且学习如何使用他们。
+
 - use(ECC)
     
     ```bash
@@ -32,6 +38,7 @@
     /opsx:explore
     /opsx:propose add-dark-mode
     /opsx:apply
+    /opsx:sync
     /opsx:archive
 
     openspec update
