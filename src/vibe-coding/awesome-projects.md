@@ -55,7 +55,7 @@
     
     ```
 
-## codegraph(or headroom or graphify)
+## codegraph(graphify)
 
 - link
 
@@ -71,4 +71,16 @@
     codegraph install
     codegraph init
     
+    ```
+# headroom
+
+- use 
+
+    ```bash
+    npm install headroom-ai
+    headroom update  
+    headroom proxy --port 8787
+    ANTHROPIC_BASE_URL=http://localhost:8787 claude
+    curl http://localhost:8787/stats
+
     ```
