@@ -77,6 +77,8 @@
 - use 
 
     ```bash
+    sudo pacman -S python-pipx
+    pipx install "headroom-ai[proxy]"
     npm install headroom-ai
     headroom update  
     headroom proxy --port 8787
