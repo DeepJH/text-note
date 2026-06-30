@@ -41,7 +41,7 @@ The agent harness performance optimization system. Skills, instincts, memory, se
 
 ## Token Optimization
 
-maybe in the guide? not sure?
+[/src/ecc-note/part/token-optimization.md](/src/ecc-note/part/token-optimization.md)
 
 ## Security
 

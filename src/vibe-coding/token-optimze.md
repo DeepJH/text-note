@@ -7,12 +7,15 @@
 
 ## 价格
 
-- 低价站
-    -低价分组
-        -次一级的模型
-- headroom这种是否有效？
-    - 记录
-        - 29 Jun 2026 使用 hr
-        - 30 Jun 2026 不使用 hr
-    - 对比结果
-        - 对比中
+- 价格低
+    - 低价站
+        -低价分组
+            -次一级的模型
+- token少
+    - headroom这种是否有效？
+        - 记录
+            - 29 Jun 2026 使用 hr
+            - 30 Jun 2026 不使用 hr
+        - 对比结果
+            - 对比中
+    - [/src/ecc-note/part/token-optimization.md](/src/ecc-note/part/token-optimization.md)
