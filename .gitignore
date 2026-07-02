@@ -1,0 +1,8 @@
+.codegraph
+.codex
+node_modules
+openspec
+package-lock.json
+package.json
+src/draft.md
+src/todo.md

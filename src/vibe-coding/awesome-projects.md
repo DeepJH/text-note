@@ -45,6 +45,8 @@
 - use:
     
     ```bash
+    openspec init
+
     /opsx:explore
     /opsx:propose add-dark-mode
     /opsx:apply
@@ -61,8 +63,6 @@
 
     - [https://github.com/colbymchenry/codegraph](https://github.com/colbymchenry/codegraph)
 
-    - [https://github.com/headroomlabs-ai/headroom](https://github.com/headroomlabs-ai/headroom)
-
     - [https://github.com/safishamsi/graphify](https://github.com/safishamsi/graphify)
 
 - use:
@@ -73,6 +73,10 @@
     
     ```
 # headroom
+
+- link
+
+    - [https://github.com/headroomlabs-ai/headroom](https://github.com/headroomlabs-ai/headroom)
 
 - use 
 
