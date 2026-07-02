@@ -45,6 +45,7 @@
 - use:
     
     ```bash
+    cd your-project
     openspec init
 
     /opsx:explore
