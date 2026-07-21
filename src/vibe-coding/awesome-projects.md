@@ -9,7 +9,7 @@
     - [learning resource](#learning-resource)
       - [\[-\]microsoft courses](#-microsoft-courses)
     - [token saving](#token-saving)
-      - [\[-\]caveman](#-caveman)
+      - [\[x\]caveman](#xcaveman)
       - [\[x\]ponytail](#xponytail)
       - [\[x\]headroom](#xheadroom)
     - [ability enhancing](#ability-enhancing)
@@ -48,13 +48,18 @@
 
 ---
 
-#### [-]caveman
+#### [x]caveman
 
 把话变简单
 
 <https://github.com/JuliusBrussee/caveman>
 
 - use
+
+    ```bash
+    curl -fsSL https://raw.githubusercontent.com/JuliusBrussee/caveman/main/install.sh | bash
+    # auto use after install
+    ```
 
 #### [x]ponytail
 
