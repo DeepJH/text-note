@@ -50,11 +50,15 @@
 
 #### [-]caveman
 
+把话变简单
+
 <https://github.com/JuliusBrussee/caveman>
 
 - use
 
 #### [x]ponytail
+
+把代码变简洁
 
 <https://github.com/DietrichGebert/ponytail>
 
@@ -67,6 +71,8 @@
     ```
 
 #### [x]headroom
+
+压缩后按需暴露原始内容
 
 <https://github.com/headroomlabs-ai/headroom>
 
@@ -173,7 +179,7 @@
 
 #### [x]graphify
 
-<https://github.com$graphify-Labs$graphify>
+<https://github.com/graphify-Labs/graphify>
 
 - use
 
