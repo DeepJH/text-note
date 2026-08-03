@@ -9,14 +9,14 @@
     - [learning resource](#learning-resource)
       - [\[-\]microsoft courses](#-microsoft-courses)
     - [token saving](#token-saving)
-      - [\[x\]caveman](#xcaveman)
-      - [\[x\]ponytail](#xponytail)
+      - [\[-\]caveman](#-caveman)
+      - [\[-\]ponytail](#-ponytail)
       - [\[x\]headroom](#xheadroom)
     - [ability enhancing](#ability-enhancing)
-      - [\[x\]ECC](#xecc)
-      - [\[x\]superpowers](#xsuperpowers)
+      - [\[-\]ECC](#-ecc)
+      - [\[-\]superpowers](#-superpowers)
       - [\[x\]openspec](#xopenspec)
-      - [\[x\]taste-skill](#xtaste-skill)
+      - [\[-\]taste-skill](#-taste-skill)
     - [workspace handling](#workspace-handling)
       - [\[x\]codegraph](#xcodegraph)
       - [\[x\]graphify](#xgraphify)
@@ -48,7 +48,7 @@
 
 ---
 
-#### [x]caveman
+#### [-]caveman
 
 把话变简单
 
@@ -61,7 +61,7 @@
     # auto use after install
     ```
 
-#### [x]ponytail
+#### [-]ponytail
 
 把代码变简洁
 
@@ -100,7 +100,7 @@
 
 ---
 
-#### [x]ECC
+#### [-]ECC
 
 <https://github.com/affaan-m/ECC>
 
@@ -111,7 +111,7 @@
     
     ```
 
-#### [x]superpowers
+#### [-]superpowers
 
 <https://github.com/obra/superpowers>
 
@@ -153,7 +153,7 @@
     
     ```
 
-#### [x]taste-skill
+#### [-]taste-skill
 
 <https://github.com/Leonxlnx/taste-skill>
 
