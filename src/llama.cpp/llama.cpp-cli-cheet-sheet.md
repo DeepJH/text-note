@@ -45,25 +45,35 @@ llama.cpp cli 的**15 个 最常用、最核心的参数**。日常使用中，�
 
 ---
 
-## 💡 3 个命令模板
+## 常用命令
 
-**1. 显卡性能充足（全显存加速跑）：**
+1. ```bash
+    llama cli \
+    -m "/run/media/deepjh/500GB矿盘A/FILE/AI/LuffyTheFox/Hermes3.6-35B-A3B-Uncensored-Genesis-V7-APEX-Compact.gguf" \
+    -ngl 17 \
+    -c 4096 \
+    -cnv \
+    -fa on
+    ```
+
+## FAQ
+
+Q1: 怎么`跑分`？
+A1: 如果要测速，则`要用 llama-bench` 而不是 llama-cli。
+    例如：  
 
 ```bash
-llama-cli -m ./model.gguf -ngl 99 -fa -c 8192 -cnv
-
+llama-bench \
+-m "/run/media/deepjh/500GB矿盘A/FILE/AI/LuffyTheFox/Hermes3.6-35B-A3B-Uncensored-Genesis-V7-APEX-Compact.gguf" \
+-ngl 17 \
+-fa on
 ```
 
-**2. 显存较小 / 显卡卡顿（省显存极限模式）：**
+Q2: 为什么 -ngl `调多了就炸显存`了？`不自动`分配吗？
+A2: 没有。`要自己定`，写的加载多少就是多少，`多了会爆`。要`尽可能大`。也有脚本可以自动调。
 
-```bash
-llama-cli -m ./model.gguf -ngl 20 -ctk q8_0 -ctv q8_0 -fa -c 4096 -cnv
+Q3: ngl`外`的部分在哪里？
+A3: `内存`。
 
-```
-
-**3. 直接在线运行 HuggingFace 模型：**
-
-```bash
-llama-cli -hf Qwen/Qwen2.5-7B-Instruct-GGUF:Q4_K_M -ngl 99 -fa -cnv
-
-```
+Q4: 设定好上下文大小，运行没有炸显存。后面是不是也不会炸？
+A4: 对。
