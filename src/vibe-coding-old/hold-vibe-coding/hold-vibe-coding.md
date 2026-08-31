@@ -13,6 +13,6 @@
 
 ## 外部
 善用提示词
-[[src/vibe-coding/vibe-coding-guide/found.md]]
+[[found]]
 善用git回档
 [[git-guide-general]]
